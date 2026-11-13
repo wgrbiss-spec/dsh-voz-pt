@@ -1,0 +1,76 @@
+{
+  "name": "dsh-voz-pt",
+  "version": "0.1.0",
+  "description": "DITADO EM PORTUGUÊS PARA O DEEPSEEK HARNESS — transcrição ao vivo no compositor com Zipformer streaming e provider Whisper local para o botão de microfone oficial. Texto vai para o rascunho, nunca é enviado sozinho. · Live Brazilian Portuguese dictation for DeepSeek Harness plus a local Whisper provider.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./icon": "./assets/icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "README.pt-BR.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "validate": "node scripts/validate-package.mjs",
+    "prepack": "node scripts/validate-package.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "voice",
+    "speech-to-text",
+    "dictation",
+    "transcription",
+    "portuguese",
+    "pt-br",
+    "voz",
+    "ditado",
+    "whisper",
+    "zipformer",
+    "sherpa-onnx"
+  ],
+  "icon": "./assets/icon.svg",
+  "license": "MIT",
+  "author": "wgrbiss-spec",
+  "homepage": "https://github.com/wgrbiss-spec/dsh-voz-pt#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wgrbiss-spec/dsh-voz-pt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wgrbiss-spec/dsh-voz-pt/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "dependencies": {
+    "sherpa-onnx-node": "1.13.8"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

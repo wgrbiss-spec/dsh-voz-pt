@@ -1,0 +1,16 @@
+# Bundle do dsh-voz-pt: provider Whisper em português para a UI oficial de voz
+# e ditado ao vivo (Zipformer streaming) no compositor.
+- id: speech-to-text
+  config:
+    defaultProvider: voz-pt-local
+    language: pt
+- insert:
+    - id: dsh-voz-pt
+      name: dsh-voz-pt
+      config:
+        providerId: voz-pt-local
+        dataRoot: !!js dshHomePath('voz-pt')
+        model: small-int8
+        streamingModel: streaming-pt
+        streamingEnabled: true
+        threads: 4

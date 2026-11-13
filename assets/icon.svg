@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Ditar em português">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="40" fill="url(#bg)"/>
+  <path d="M90 36a15 15 0 0 0-15 15v33a15 15 0 0 0 30 0V51a15 15 0 0 0-15-15Zm-30 45a5 5 0 0 1 10 0 20 20 0 0 0 40 0 5 5 0 0 1 10 0 30 30 0 0 1-25 29.6V126h11a5 5 0 0 1 0 10H74a5 5 0 0 1 0-10h11v-15.4A30 30 0 0 1 60 81Z" fill="url(#accent)"/>
+  <text x="90" y="158" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="#e2e8f0">PT</text>
+</svg>
